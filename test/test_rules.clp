@@ -1,0 +1,7 @@
+(load "../clips/rules.clp")
+(reset)
+(assert (organization (name "Company A") (type "Filipino") (practice "unfair")))
+(assert (land-ownership (owner-type "foreign") (percentage-owned 50)))
+(assert (contract (status "impaired")))
+(assert (taxation (type "non-uniform")))
+(run)
