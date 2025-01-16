@@ -1,0 +1,6 @@
+(assert (business-entity (name "ABC Corp") (type "Corporation") (status "Active")))
+(assert (tax-data (income 500000) (deductions 100000) (tax-rate 0.25)))
+(assert (employee (name "John Doe") (position "Manager") (salary 80000)))
+(assert (contract (terms "Term 1") (parties "ABC Corp, XYZ Ltd.") (duration "1 Year")))
+(assert (real-estate (property-name "Building A") (property-type "Commercial") (owner "ABC Corp")))
+;; (assert (environmental (regulation "Waste Management Act") (compliance-status "Compliant")))
