@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Flask Application{% endblock %}</title>
+    <title>{% block title %}LEX{% endblock %}</title>
     <!-- Include your CSS files here -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block head %}
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Flask Application</h1>
+        <h1>LEX</h1>
         <!-- Add navigation links here -->
     </header>
     <main>
@@ -20,7 +20,7 @@
         {% endblock %}
     </main>
     <footer>
-        <p>&copy; 2025 My Flask Application</p>
+        <p>&copy; 2025 LEX</p>
     </footer>
     <!-- Include your JavaScript files here -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
