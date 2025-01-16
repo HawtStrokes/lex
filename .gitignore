@@ -1,0 +1,45 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Flask
+instance/
+.webassets-cache
+
+# CLIPS
+*.clp~
+
+# Environment
+.env
+.venv
+venv/
+env/
+ENV/
+*.env
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+
+# Dependency directories
+node_modules/
+bower_components/
+
