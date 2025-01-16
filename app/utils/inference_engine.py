@@ -8,12 +8,26 @@ import tempfile
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+# def generate_clips_facts(data):
+#     facts = ""
+#     for item in data:
+#         fact = f"(assert ({item['type']} "
+#         for key, value in item['attributes'].items():
+#             fact += f"({key} \"{value}\") "
+#         fact += "))\n"
+#         facts += fact
+#     return facts
+
 def generate_clips_facts(data):
     facts = ""
     for item in data:
         fact = f"(assert ({item['type']} "
         for key, value in item['attributes'].items():
-            fact += f"({key} \"{value}\") "
+            # Check if the value is a float (or any other numeric type)
+            if isinstance(value, (float, int)):
+                fact += f"({key} {value}) "  # Numeric values without quotes
+            else:
+                fact += f"({key} \"{value}\") "  # String values with quotes
         fact += "))\n"
         facts += fact
     return facts
