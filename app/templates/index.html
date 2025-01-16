@@ -1,0 +1,71 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}LEX{% endblock %}
+
+{% block content %}
+    <h2>Enter Data for Inference</h2>
+    <form action="/" method="POST">
+        <div class="form-section">
+            <h3>Business Entity</h3>
+            <label for="business_name">Name:</label>
+            <input type="text" id="business_name" name="business_name" required>
+
+            <label for="business_type">Type:</label>
+            <input type="text" id="business_type" name="business_type" required>
+
+            <label for="business_status">Status:</label>
+            <input type="text" id="business_status" name="business_status" required>
+        </div>
+
+        <div class="form-section">
+            <h3>Tax Data</h3>
+            <label for="income">Income:</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="deductions">Deductions:</label>
+            <input type="number" id="deductions" name="deductions" required>
+
+            <label for="tax_rate">Tax Rate:</label>
+            <input type="number" id="tax_rate" name="tax_rate" step="0.01" required>
+        </div>
+
+        <div class="form-section">
+            <h3>Employee</h3>
+            <label for="employee_name">Name:</label>
+            <input type="text" id="employee_name" name="employee_name" required>
+
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary" required>
+        </div>
+
+        <div class="form-section">
+            <h3>Contract</h3>
+            <label for="contract_terms">Terms:</label>
+            <input type="text" id="contract_terms" name="contract_terms" required>
+
+            <label for="parties">Parties:</label>
+            <input type="text" id="parties" name="parties" required>
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required>
+        </div>
+
+        <div class="form-section">
+            <h3>Real Estate</h3>
+            <label for="property_name">Property Name:</label>
+            <input type="text" id="property_name" name="property_name" required>
+
+            <label for="property_type">Property Type:</label>
+            <input type="text" id="property_type" name="property_type" required>
+
+            <label for="owner">Owner:</label>
+            <input type="text" id="owner" name="owner" required>
+        </div>
+
+        <input type="submit" value="Generate CLIPS Facts">
+    </form>
+{% endblock %}

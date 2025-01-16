@@ -7,5 +7,6 @@
    (slot vat-status) ;; VAT registered, Non-VAT registered
    (slot tax-rate)
    (slot penalties)
+   (slot deductions)
    (slot payment-history)) ;; Dates of previous tax payments
-
+ 
