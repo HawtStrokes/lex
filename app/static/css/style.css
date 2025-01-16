@@ -1,0 +1,81 @@
+/* Cyberpunk-style.css */
+body {
+    background-color: #1a1a2e;
+    color: #e9d8fd;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+button {
+    background-color: #7f00ff;
+    border: 2px solid #ff00ff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.navbar {
+    background-color: #3a1a5e;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #7f00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #e9d8fd;
+    text-align: center;
+    padding: 10px;
+}
+
+.neon-text {
+    font-size: 48px;
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
+}
+
+.card {
+    background-color: #2c2c54;
+    border: 2px solid #7f00ff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7f00ff;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px #ff00ff;
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
