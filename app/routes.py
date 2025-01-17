@@ -1,10 +1,7 @@
-# routes.py
 from flask import Blueprint, render_template, request, jsonify
-# from .utils.inference_engine import generate_clips_facts, run_inference
 from .utils.inference_engine import generate_clips_facts, run_inference, initialize_inference_engine
 
 main = Blueprint('main', __name__)
-
 
 @main.route("/", methods=["GET", "POST"])
 def index():
@@ -92,17 +89,18 @@ def index():
             }
         ]
 
-        # Debug logging to verify the values passed to CLIPS
-
-        # Generate CLIPS facts and get the temporary file path
+        # Generate CLIPS facts
         facts_file = generate_clips_facts(data)
 
         # Initialize the inference engine with the facts file
         env = initialize_inference_engine(facts_file)
 
         # Run the inference engine
-        run_inference(env)
-
-        return jsonify({"message": "Inference completed successfully"})
+        inference_result = run_inference(env)
+        print("Captured Inference Output:", inference_result)  # Debugging step
+        # Return the results to the template (you can change this based on your preferred display method)
+        return render_template("inference_result.html", result=inference_result)
 
     return render_template("index.html")
+
+
