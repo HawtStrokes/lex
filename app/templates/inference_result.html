@@ -3,23 +3,25 @@
 {% block title %}Inference Results{% endblock %}
 
 {% block content %}
-    <h2>Inference Results</h2>
-    <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-        {% for template_name, facts_list in result.items() %}
+    <!-- <div class="inference-container"> -->
+        <h2>Inference Results</h2>
+        <div class="inference-container" style="max-height: 800px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+            {% for template_name, facts_list in result.items() %}
             <h3>{{ template_name }}</h3>
             <ul>
                 {% for fact in facts_list %}
-                    <li>
-                        <ul>
-                            {% for slot_name, slot_value in fact.items() %}
-                                <li><strong>{{ slot_name }}:</strong> {{ slot_value }}</li>
-                            {% endfor %}
-                        </ul>
-                    </li>
+                <li>
+                    <ul>
+                        {% for slot_name, slot_value in fact.items() %}
+                        <li><strong>{{ slot_name }}:</strong> {{ slot_value }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
                 {% endfor %}
             </ul>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
+    <!-- </div> -->
     <a href="/">Go back</a>
 {% endblock %}
 
