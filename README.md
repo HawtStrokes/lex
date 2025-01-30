@@ -1,6 +1,6 @@
-# Lex: A Legal Expert System for Business Law in the Philippines
+# Lex: A Legal Expert System for Business Law
 
-Lex is a web-based legal expert system designed to assist users in understanding and applying principles of Business Law in the Philippines. It integrates CLIPS for rule-based reasoning and Flask for a user-friendly web interface.
+Lex is a web-based legal expert system designed to assist users in understanding and applying principles of Business Law. It integrates CLIPS for rule-based reasoning and Flask for a user-friendly web interface.
 
 ---
 
